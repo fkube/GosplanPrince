@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta charset="utf-8">
+	<title>Принц Госплана</title>
+
+    <!--<style>
+        html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, textarea, button{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        body {
+            line-height: 1;
+        }
+        html, body{
+            height: 100%;
+            background: #000;
+            color: #FFF;
+        }
+        .current{
+            background:#900;
+        }
+    </style>-->
+</head>
+<body>
+
+    <script>
+        var require = {
+            appDir: "prince/",
+            baseUrl: "",
+//            dir: "../../webapp-build",
+//
+            //Comment out the optimize line if you want
+            //the code minified by UglifyJS
+            optimize: "none",
+            waitSeconds: 7,
+
+            //force non-cache
+            urlArgs: "bust=" +  (new Date()).getTime(),
+
+            config: {
+                'app/render': {
+                    'root': '#game'
+                }
+            },
+
+            paths: {
+                'jquery': 'empty:',
+                'mustache': 'lib/mustache',
+                'handlebars': 'lib/handlebars',
+
+                'domReady': 'plugin/domReady',
+                'text': 'plugin/text'
+            }
+        };
+    </script>
+    <script data-main="prince/bootstrap" src="prince/r.js"></script>
+
+    <h1>Принц Госплана</h1>
+
+    <div id="game"></div>
+
+</body>
+</html>

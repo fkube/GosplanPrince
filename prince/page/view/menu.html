@@ -1,0 +1,38 @@
+<div class="campaign">
+    <button class="start">Start campaign</button>
+</div>
+
+{{#sides}}
+    <div class="side-{{i}} side">
+        <h2>Player {{i}}</h2>
+
+        {{#types}}
+        <div class="{{this}} side-option">
+            <label>
+                <input type="radio" value="{{this}}" name="side{{../i}}"{{#firstChecked ../i}} checked="checked"{{/firstChecked}}>
+                {{label}}
+
+            {{#isPlayer this}}
+                <input class="algo" type="hidden" value="">
+            {{/isPlayer}}
+
+            {{#isComputer this}}
+                <select class="algo">
+                    {{#compTypes this}}
+                        <option value="{{ this }}">{{ this }}</option>
+                    {{/compTypes}}
+                </select>
+            {{/isComputer}}
+
+            {{#isAlgorithm this}}
+                <textarea class="algo"></textarea>
+            {{/isAlgorithm}}
+            </label>
+        </div>
+        {{/types}}
+    </div>
+{{/sides}}
+
+<div class="skirmish">
+    <button class="start">Start skirmish</button>
+</div>

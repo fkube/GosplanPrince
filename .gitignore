@@ -1,0 +1,17 @@
+.idea
+web/test
+app/cache/*
+app/logs/*
+vendor/
+app/config/parameters.yml
+.project
+.settings
+.buildpath
+Thumbs.db
+web/bundles
+web/resources
+web/.htaccess
+*.DS_Store
+*~
+*#
+*.log
